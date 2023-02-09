@@ -45,13 +45,13 @@ const Calculadora: React.FC = () => {
       setOperando(true);
     } else if (val.target.value === '=') {
       if (operacion === '+') {
-        setResultado(parseInt(value) + parseInt(lastValue));
+        setResultado(parseFloat(value) + parseFloat(lastValue));
       } else if (operacion === '-') {
-        setResultado(parseInt(value) - parseInt(lastValue));
+        setResultado(parseFloat(value) - parseFloat(lastValue));
       } else if (operacion === 'X') {
-        setResultado(parseInt(value) * parseInt(lastValue));
+        setResultado(parseFloat(value) * parseFloat(lastValue));
       } else if (operacion === '/') {
-        setResultado(parseInt(value) / parseInt(lastValue));
+        setResultado(parseFloat(value) / parseFloat(lastValue));
       }
 
       setValue('');
