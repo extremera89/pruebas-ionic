@@ -16,7 +16,11 @@ import {
   IonItem,
   IonIcon,
   IonLabel,
+  IonPage,
+  IonMenuButton,
 } from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
+import { Redirect, Route } from 'react-router-dom';
 
 import { heart, home, menu } from 'ionicons/icons';
 
@@ -41,53 +45,46 @@ import './theme/variables.css';
 import Calculadora from './pages/Calculadora';
 
 const App: React.FC = () => (
-  <Calculadora></Calculadora>
+  /*<Calculadora></Calculadora>*/
 
-  /*<IonApp>
-    <IonSplitPane when="sm" contentId="main-content">
+  <>
+    <IonReactRouter>
       <IonMenu contentId="main-content">
         <IonHeader>
-          <IonToolbar color="primary">
+          <IonToolbar>
+            <IonTitle>Menu Content</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent className="ion-padding">
+          <IonButton tab="" href="/">
+            Inicio
+          </IonButton>
+          <IonButton tab="calculadora" href="/calculadora">
+            Calculadora
+          </IonButton>
+        </IonContent>
+      </IonMenu>
+      <IonPage id="main-content">
+        <IonHeader>
+          <IonToolbar>
+            <IonButtons slot="start">
+              <IonMenuButton></IonMenuButton>
+            </IonButtons>
             <IonTitle>Menu</IonTitle>
           </IonToolbar>
         </IonHeader>
 
-        <IonContent>
-          <IonList>
-            <IonListHeader>Navigate</IonListHeader>
-            <IonMenuToggle autoHide={false}>
-              <IonItem button>
-                <IonIcon slot="start" icon={home}></IonIcon>
-                <IonLabel>Home</IonLabel>
-              </IonItem>
-              <IonItem button>
-                <IonIcon slot="start" icon={heart}></IonIcon>
-                <IonLabel>Favoritos</IonLabel>
-              </IonItem>
-            </IonMenuToggle>
-          </IonList>
-        </IonContent>
-      </IonMenu>
-
-      <div className="ion-page" id="main-content">
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuToggle>
-                <IonButton>
-                  <IonIcon slot="icon-only" icon={menu}></IonIcon>
-                </IonButton>
-              </IonMenuToggle>
-            </IonButtons>
-            <IonTitle>Header</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <IonContent className="ion-padding">
-          <h1>Main Content</h1>
+          <Route exact path="/">
+            Tap the button in the toolbar to open the menu.
+          </Route>
+          <Route exact path="/calculadora">
+            <Calculadora />
+          </Route>
         </IonContent>
-      </div>
-    </IonSplitPane>
-  </IonApp>*/
+      </IonPage>
+    </IonReactRouter>
+  </>
 );
 
 export default App;
