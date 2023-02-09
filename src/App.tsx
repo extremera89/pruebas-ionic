@@ -38,9 +38,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Calculadora from './pages/Calculadora';
 
 const App: React.FC = () => (
-  <IonApp>
+  <Calculadora></Calculadora>
+
+  /*<IonApp>
     <IonSplitPane when="sm" contentId="main-content">
       <IonMenu contentId="main-content">
         <IonHeader>
@@ -84,7 +87,7 @@ const App: React.FC = () => (
         </IonContent>
       </div>
     </IonSplitPane>
-  </IonApp>
+  </IonApp>*/
 );
 
 export default App;
