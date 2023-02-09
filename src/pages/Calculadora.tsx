@@ -22,7 +22,7 @@ const Calculadora: React.FC = () => {
   const numeros = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
   const operaciones = ['+', '-', 'X', '/'];
 
-  function prueba(val: any) {
+  function click(val: any) {
     if (numeros.includes(val.target.value) && operando === false) {
       setValue(value + val.target.value);
       setResultado(resultado + val.target.value);
@@ -83,63 +83,63 @@ const Calculadora: React.FC = () => {
               <IonCol id="resultado">{resultado}</IonCol>
             </IonRow>
             <IonRow>
-              <IonCol id="ac" size="9" onClick={(e) => prueba(e)} value="AC">
+              <IonCol id="ac" size="9" onClick={(e) => click(e)} value="AC">
                 AC
               </IonCol>
-              <IonCol id="derecha" onClick={(e) => prueba(e)} value="/">
+              <IonCol id="derecha" onClick={(e) => click(e)} value="/">
                 /
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="7">
+              <IonCol id="centro" onClick={(e) => click(e)} value="7">
                 7
               </IonCol>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="8">
+              <IonCol id="centro" onClick={(e) => click(e)} value="8">
                 8
               </IonCol>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="9">
+              <IonCol id="centro" onClick={(e) => click(e)} value="9">
                 9
               </IonCol>
-              <IonCol id="derecha" onClick={(e) => prueba(e)} value="X">
+              <IonCol id="derecha" onClick={(e) => click(e)} value="X">
                 X
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="4">
+              <IonCol id="centro" onClick={(e) => click(e)} value="4">
                 4
               </IonCol>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="5">
+              <IonCol id="centro" onClick={(e) => click(e)} value="5">
                 5
               </IonCol>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="6">
+              <IonCol id="centro" onClick={(e) => click(e)} value="6">
                 6
               </IonCol>
-              <IonCol id="derecha" onClick={(e) => prueba(e)} value="-">
+              <IonCol id="derecha" onClick={(e) => click(e)} value="-">
                 -
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="1">
+              <IonCol id="centro" onClick={(e) => click(e)} value="1">
                 1
               </IonCol>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="2">
+              <IonCol id="centro" onClick={(e) => click(e)} value="2">
                 2
               </IonCol>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="3">
+              <IonCol id="centro" onClick={(e) => click(e)} value="3">
                 3
               </IonCol>
-              <IonCol id="derecha" onClick={(e) => prueba(e)} value="+">
+              <IonCol id="derecha" onClick={(e) => click(e)} value="+">
                 +
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value="0" size="6">
+              <IonCol id="centro" onClick={(e) => click(e)} value="0" size="6">
                 0
               </IonCol>
-              <IonCol id="centro" onClick={(e) => prueba(e)} value=",">
+              <IonCol id="centro" onClick={(e) => click(e)} value=",">
                 ,
               </IonCol>
-              <IonCol id="derecha" onClick={(e) => prueba(e)} value="=">
+              <IonCol id="derecha" onClick={(e) => click(e)} value="=">
                 =
               </IonCol>
             </IonRow>
