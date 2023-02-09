@@ -64,6 +64,12 @@ const Calculadora: React.FC = () => {
       setLastValue('');
       setOperando(false);
       setOperacion('');
+    } else if (val.target.value === ',' && operando === false) {
+      setValue(value + '.');
+      setResultado(resultado + '.');
+    } else if (val.targe.value === ',' && operando === true) {
+      setLastValue(lastValue + '.');
+      setResultado(resultado + '.');
     }
   }
 
@@ -74,72 +80,66 @@ const Calculadora: React.FC = () => {
         <IonContent fullscreen>
           <IonGrid>
             <IonRow>
-              <IonCol>{resultado}</IonCol>
+              <IonCol id="resultado">{resultado}</IonCol>
             </IonRow>
             <IonRow>
-              <IonCol onClick={(e) => prueba(e)} value="AC">
+              <IonCol id="ac" size="9" onClick={(e) => prueba(e)} value="AC">
                 AC
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="+/-">
-                +/-
-              </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="%">
-                %
-              </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="/">
+              <IonCol id="derecha" onClick={(e) => prueba(e)} value="/">
                 /
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol onClick={(e) => prueba(e)} value="7">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="7">
                 7
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="8">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="8">
                 8
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="9">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="9">
                 9
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="X">
+              <IonCol id="derecha" onClick={(e) => prueba(e)} value="X">
                 X
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol onClick={(e) => prueba(e)} value="4">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="4">
                 4
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="5">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="5">
                 5
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="6">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="6">
                 6
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="-">
+              <IonCol id="derecha" onClick={(e) => prueba(e)} value="-">
                 -
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol onClick={(e) => prueba(e)} value="1">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="1">
                 1
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="2">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="2">
                 2
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="3">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="3">
                 3
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="+">
+              <IonCol id="derecha" onClick={(e) => prueba(e)} value="+">
                 +
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol onClick={(e) => prueba(e)} value="0" size="6">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value="0" size="6">
                 0
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value=",">
+              <IonCol id="centro" onClick={(e) => prueba(e)} value=",">
                 ,
               </IonCol>
-              <IonCol onClick={(e) => prueba(e)} value="=">
+              <IonCol id="derecha" onClick={(e) => prueba(e)} value="=">
                 =
               </IonCol>
             </IonRow>

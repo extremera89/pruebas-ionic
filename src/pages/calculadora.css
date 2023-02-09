@@ -4,3 +4,24 @@ ion-col {
   color: #fff;
   text-align: center;
 }
+
+#resultado {
+  height: 30px;
+  background-color: black;
+}
+
+#ac {
+  background-color: grey;
+  color: black;
+  font-weight: bold;
+}
+
+#derecha {
+  background-color: #c58700;
+  color: white;
+}
+
+#centro {
+  color: white;
+  background-color: rgb(46, 46, 46);
+}
